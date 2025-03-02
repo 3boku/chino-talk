@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/front/img//rabbit.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; /* 배경 이미지 중앙 정렬 */
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav > img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.nav > h1 {
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.chat {
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(#1e205111, #1c215170 5% 100%);
+    background-color: rgba(46, 46, 79, 0.315);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.chatwrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+    align-items: center;
+}
+
+.chat-in {
+    display: flex;
+    align-items: flex-end;
+}
+
+.text1 {
+    font-size: 1.6em;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.text3 {
+    margin-top: 10px;
+    font-size: 1.3em;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+}
+
+.input-area {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.input {
+    width: 90%;
+    height: 45px;
+    background-color: #1c215170;
+    border-radius: 25px;
+    color: white;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.input::placeholder {
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.send-btn {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90%;
+}
+
+.send-btn:hover {
+    background-color: #45a049;
+}
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+    .nav > h1 {
+        font-size: 1.2em;
+    }
+
+    .chatwrap {
+        width: 90%;
+    }
+
+    .text1 {
+        font-size: 1.2em;
+    }
+
+    .text3 {
+        font-size: 1.1em;
+    }
+
+    .input {
+        width: 90%;
+        height: 40px;
+    }
+
+    .send-btn {
+        width: 90%;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav > h1 {
+        font-size: 1em;
+    }
+
+    .chat {
+        height: 60%;
+    }
+
+    .chat-in {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .text1 {
+        font-size: 1.1em;
+    }
+
+    .input-area {
+        width: 100%;
+    }
+
+    .input {
+        width: 100%;
+        height: 40px;
+    }
+
+    .send-btn {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .line {
+        width: 90%;
+    }
+}

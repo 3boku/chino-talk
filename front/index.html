@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav">
+                <img src="/front/img//chino_profile.png" alt="치노 사진" />
+                <h1>치노와 대화하기</h1>
+            </div>
+            <div class="chat">
+                <div class="chatwrap">
+                    <div class="chat-in">
+                        <div class="text1">카후우 치노</div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="text3">
+                        메세지를 입력해서 치노와 대화해 보세요!
+                    </div>
+                    <div class="input-area">
+                        <input
+                            type="text"
+                            class="input"
+                            placeholder="메시지를 입력하세요"
+                        />
+                        <button class="send-btn" onclick="postMessage()">
+                            보내기
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
