@@ -15,6 +15,7 @@ type msgStruct struct {
 func main() {
 	r := gin.Default()
 
+	// Enable CORS
 	r.Use(cors.New(cors.Config{
 		AllowOrigins: []string{"*"},
 		AllowMethods: []string{"GET", "POST", "PUT", "PATCH", "DELETE"},
@@ -22,6 +23,10 @@ func main() {
 		MaxAge:       24 * time.Hour,
 	}))
 
+	// Serve static files from the front directory
+	r.Static("/front", "./front")
+
+	// Handle the /chat POST request
 	r.POST("/chat", func(c *gin.Context) {
 		var msg msgStruct
 		err := c.ShouldBindJSON(&msg)
@@ -36,5 +41,6 @@ func main() {
 		})
 	})
 
+	// Run the server
 	r.Run(":8080")
 }
